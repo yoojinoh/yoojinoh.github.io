@@ -60,7 +60,7 @@ plugins:
 author:
   name             : "Yoojin Oh"
   avatar           : "/assets/images/bio-photo.jpg"
-  # bio              : 
+  bio              : "yoojin.oh@ipvs.uni-stuttgart.de" 
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -93,7 +93,7 @@ defaults:
       path: "_pages"
       type: pages
     values:
-      layout: home
+      layout: single
       author_profile: true
   # _posts
   - scope:
