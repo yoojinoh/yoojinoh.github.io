@@ -60,8 +60,7 @@ plugins:
 author:
   name             : "Yoojin Oh"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "I'm an PhD student at the University of Stuttgart in Germany 
-                      and the International Max Planck Research School in Intelligent Systems"
+  # bio              : 
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -89,6 +88,13 @@ author:
 #       url: "https://instagram.com/"
 
 defaults:
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: home
+      author_profile: true
   # _posts
   - scope:
       path: ""
@@ -100,13 +106,6 @@ defaults:
       comments: true
       share: true
       related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
 
 category_archive:
   type: liquid
