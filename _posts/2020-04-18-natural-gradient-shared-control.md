@@ -12,6 +12,8 @@ How can we combine the controls of both user and robot? How can we give more con
 Our motivation comes from vector fields.
 We can think of the global autonomous robot policy as a vector field over the whole state space. At any state, the robot policy would want to avoid the obstacles but move towards the goal. Therefore, obstacles can be represented as a "source (positive divergence)" and the goals can be though as a "sink (negative divergence)".  Depending on the objectives that the autonomous policy optimizes, The environment can have multiple sources and states.
 ![Image of policy vector field](/assets/images/natural-gradient-shared-control/quiver.png)
+{% include video id="zc4ryqWUz4k" provider="youtube" %}
+
 Near these regions (sources & sinks) the autonomous robot can take more control authority to ensure safety or precision. Elsewhere, the user can maintain more control authority in regions where the field does not diverge. We connect this idea with the Fisher information matrix.
 
 We start by formulating shared control as an optimization problem.
@@ -40,6 +42,7 @@ We represent the autonomous policy as a neural network policy that can be regres
 Thus, to compute the second-order derivative of the Q function, we use the first-order derivative of the actions, using the finite difference method. This can be easily queried using the trained network.
 
 ![Image of envs](/assets/images/natural-gradient-shared-control/policy.png)
+{% include video id="3d47extl6bU" provider="youtube" %}
 
 For a pick-and-place task,  we display the ellipses that represent the eigenvalues and the eigenvectors of the inverse Fisher matrix F^(-1). The ellipse represents the direction that the user’s action is stretched along. When the ellipse is close to a circle the user has more control authority over the system. Oppositely, when the ellipse is narrow, for example near an obstacle, the robot augments the user’s actions towards one direction.
 

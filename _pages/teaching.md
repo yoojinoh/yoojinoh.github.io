@@ -12,3 +12,7 @@ There are currently no open topics.
 - (WS19/20) [Robotics](https://ipvs.informatik.uni-stuttgart.de/mlr/robotics-ws-19-20/)
 - (SS19)  Practical Course Robotics
 - (WS18/29) Robotics
+
+#### Previous
+- (Fall 2015, Spring 2017) Robotics
+- (Spring 2016, Fall 2016) Dynamics
